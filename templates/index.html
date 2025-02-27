@@ -1,0 +1,48 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happiest Birthday</title>
+    
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+
+    <!-- CSS Link using Django static -->
+    <link rel="stylesheet" href="{% static 'style.css' %}">
+
+</head>
+<body>
+
+    <div class="container">
+        <div class="top-text">Hpy Brthdy Witch</div>
+        
+        <div class="image-container">
+            <img src="/media/A2bg.png" 
+                 alt="Romantic couple with flowers" 
+                 class="couple-image">
+        </div>
+    </div>
+
+    <div id="winPopUp"> 
+        <video width="1000px" height="400px" autoplay muted loop>
+            <source src="/media/bkli.mp4" type="video/mp4">
+        </video>
+    </div>
+
+    <div class="buttons-container">
+        <button class="button" id="suckYou" onclick="location.href='{% url 'gift' %}'">Unlock Gift</button>
+        <button class="button" id="loveYou">Lobe You Tue</button>
+        <button class="button" id="fuckYou">Not Impressed</button>
+    </div>
+
+    <div id="lovepopup">
+        <canvas id="fireworksCanvas"></canvas>
+    </div>
+
+    <!-- JS Script Link using Django static -->
+    <script src="{% static 'script.js' %}"></script>
+
+</body>
+</html>
